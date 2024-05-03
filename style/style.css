@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {overflow: hidden}
+
+:root{
+    --FF:sans-serif;
+    --FS:clamp(1rem, 2.2vh, 1.5rem);
+    --FONT-COLOR: #333;
+    --LINK-COLOR:   #009688;
+    --PADDING-TOP-BOTT: 1.25em;
+    --PADDING-SIDE: 2.5%;
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+
+}
+
+body{
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+div.img{
+    background-image: url(/img/shape.jpg);
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover; }
+
+
+.nav_bar{
+    
+    width: 80%;
+    margin: auto;
+    padding: var(--PADDING-TOP-BOTT);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+}
+.nowrap{
+    white-space: nowrap;
+}
+
+.logo{
+    height: 5rem;
+}
+.nav_bar ul li{
+    white-space: nowrap;
+    list-style: none;
+    display: inline-block;
+    margin: 0rem 2rem;
+    color: var(--FONT-COLOR);
+    position: relative;
+
+}
+.nav_bar ul li a{
+text-decoration: none;
+text-transform: uppercase;
+font-size: 2rem;
+color: var(--FONT-COLOR);
+
+
+}
+
+.nav_bar ul li::after{
+content: "";
+height: 3px;
+width: 0;
+background: var(--LINK-COLOR);
+position: absolute;
+left:0;
+bottom: -10px;
+transition: 0.5s;
+}
+.nav_bar ul li:hover::after{
+  width: 100%;
+    }
+
+.text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--FONT-COLOR);
+
+}
+.text h1{
+    font-size: 5rem;
+    margin-top: 1em ;
+}
+
+.text p{
+    margin:1em auto; 
+    font-size: 1.20rem;
+    font-weight: 100; 
+    line-height: 25px;
+}
